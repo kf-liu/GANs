@@ -155,10 +155,6 @@ def entrenar_discriminador(modelo, dataset, n_iteraciones=20, batch = 128):
 
     print(str(i+1) + ' Real:' + str(acc_real*100) + ', Fake:' + str(acc_fake*100))
 
-
-
-
-
 dataset = cargar_imagenes()
 entrenar_discriminador(modelo_discriminador, dataset)
 
@@ -261,10 +257,6 @@ def entrenamiento(datos, modelo_generador, modelo_discriminador, epochs, n_batch
     if (epoch+1) % 10 == 0:
       evaluar_y_guardar(modelo_generador,epoch = epoch, medio_dataset= medio_dataset)
       mostrar_imagenes_generadas(X_fake, epoch = epoch)
-
-
-
-
 
 entrenamiento(dataset, modelo_generador, modelo_discriminador, epochs = 300, n_batch=128, inicio = 0)
 
